@@ -1,10 +1,15 @@
 :root {
     --dark-blue:#363f5f;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    font-size: 93.75%; /* mesma coisa que 15 px pq navegador padrao da 16 px, fazendo regra de 3 (16=100% 15=x)*/
 }
 
 body {
@@ -122,6 +127,12 @@ table tbody tr td:first-child {
     border-radius: 0.25rem 0 0 0.25rem;
 }
 
+table thead tr th:last-child,
+table tbody tr td:last-child {
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+
 #data-table {
     width: 100%;
     border-spacing: 0 0.5rem;
@@ -174,4 +185,17 @@ footer {
     padding: 4rem 0 2rem;
     color: var(--dark-blue);
     opacity: 0.6;
+}
+
+/* RESPONSIVE ==================*/
+@media (min-width: 800px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    #balance {
+        display: grid; /*colocou a entrada, saida e total um do lado da outra */
+        grid-template-columns: repeat(3, 1fr); /*repete para as 3 colunas, 1 fr = 1 fracao */
+        gap: 2rem; /*espaço entre as colunas de entrada, saída e total*/
+    }
 }
