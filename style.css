@@ -14,6 +14,15 @@ body {
 
 .sr-only {
     position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+
 }
 
 .container {
@@ -30,8 +39,20 @@ h2 {
 }
 
 
+/* LINKS AND BUTTON ========================== */
+ a {
+    text-decoration: none;
+    color: #49AA26;
+}
 
+a:hover {
+    color: #3dd705;
+}
 
+.button.new {
+    display: inline-block;
+    margin-bottom: .8rem;
+}
 
 /* HEADER ======================*/
 header {
@@ -72,6 +93,10 @@ header h1 {
 .card h3 {
     font-weight: normal;
     font-size: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
 }
 
@@ -121,6 +146,8 @@ table tbody td {
     background: white;
     padding: 1rem 2rem;
 }
+
+
 
 td.description {
     color: var(--dark-blue);
