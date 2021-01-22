@@ -1,5 +1,6 @@
 :root {
     --dark-blue:#363f5f;
+    --green: #49AA26;
 }
 
 * {
@@ -47,17 +48,31 @@ h2 {
 /* LINKS AND BUTTON ========================== */
  a {
     text-decoration: none;
-    color: #49AA26;
+    color: var(--green);
 }
 
 a:hover {
     color: #3dd705;
 }
 
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    color: white;
+    background: var(--green);
+}
+
 .button.new {
     display: inline-block;
     margin-bottom: .8rem;
 }
+
+.button.cancel {
+
+}
+
+
 
 /* HEADER ======================*/
 header {
@@ -113,7 +128,7 @@ margint-top: 1rem;
 }
 
 .card.green {
-    background: #49AA26;
+    background: var(--green);
     color: white;
     
 }
@@ -225,10 +240,27 @@ input {
     border: none;
     border-radius: 0.2rem;
     padding: 0.8rem;
+    width: 100%;
 }
 
-.inpout
+.input-group {
+    margin-top: 0.8rem;
+}
 
+.input-group small {
+  opacity: 0.4;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+    width: 48%;
+}
 
 /*FOOTER ===============================*/
 footer {
