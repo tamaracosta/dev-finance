@@ -122,6 +122,20 @@ margint-top: 1rem;
 
 /* TABELA ================ */
 
+#transaction {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+#data-table {
+    
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color: #969cb3;
+   
+}
+
 table thead tr th:first-child,
 table tbody tr td:first-child {
     border-radius: 0.25rem 0 0 0.25rem;
@@ -133,11 +147,7 @@ table tbody tr td:last-child {
 }
 
 
-#data-table {
-    width: 100%;
-    border-spacing: 0 0.5rem;
-    color: #969cb3;
-}
+
 
 table th {
     background: white;
@@ -174,12 +184,53 @@ td.expense {
 
 
 
+/* MODAL ===============================*/
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   opacity: 0;
+   visibility: hidden;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: #F0F2f5;
+    padding: 2.4rem;
+
+    }
 
 
 
+/* FORM ===============================*/
+form {
+    max-width: 500px;
+}
+
+form h2 {
+    margin-top: 0;
+}
+
+input {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+}
+
+.inpout
 
 
-/*FOOTER */
+/*FOOTER ===============================*/
 footer {
     text-align: center;
     padding: 4rem 0 2rem;
